@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+    <html lang="th">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+    Fēngqù Málà
+</title>
+<link rel="shortcut icon" href="imgs/malatang.png" type="image/x-icon"> 
+<link rel="stylesheet" href="fm.css">
+
+</head>
+<body>
+  <h1 class="FM" style="text-align: left;"><img src="imgs/malatang_h1.png" style="height: 50px;" > Fēngqù Málà </h1>
+
+<button class="tablink" onclick="openPage('soup', this, '#990000')">soup</button>
+<button class="tablink" onclick="openPage('noodle', this, '#990000')">noodles</button>
+<button class="tablink" onclick="openPage('meat', this, '#990000')">meats</button>
+<button class="tablink" onclick="openPage('vegetables', this, '#990000')"  id="defaultOpen">vegetables</button>
+<button class="tablink" onclick="openPage('additional', this, '#990000')">additional</button>
+
+<div class="cart">
+  <h2>Shopping Cart <img src="imgs/cart.png" style="height: 25px;"></h2>
+  <div id="cartContent"></div>
+  <p style="color: black; font-size: 30px; background-color: rgb(245, 128, 128); border-radius: 10px;">Total: ฿<span id="totalPrice">0</span></p>
+</div>
+
+<div id="soup" class="tabcontent">
+  <h1 style="color: #990000; font-size: 100px; margin-top: 0; background: -webkit-linear-gradient(#fb6565, #f31e1e);
+  background-clip: text; -webkit-text-fill-color: transparent;">Soup</h1>
+  <table>
+    <tr>
+      <td class="loy1" >
+        <div class="product">
+          <img src="imgs/เผ็ดน้อย.png" alt="Mala soup (mild)">
+          <p>Mala soup (mild)</p>
+          <p>59 baht</p>
+        </div>
+        
+      </td>
+            <td class="loy1" rowspan="2">
+        <div class="product">
+          <img src="imgs/เผ็ดมาก.png" alt="Mala soup (hot)">
+          <p>Mala soup (hot)</p>
+          <p>59 baht</p>
+        </div>
+      </td>
+      <td class="loy1" rowspan="2">
+        <div class="product">
+          <img src="imgs/เห็ดหอม.png" alt="Shiitake soup" >
+          <p>Shiitake soup</p>
+          <p>59 baht</p>
+        </div>
+      </td>
+    </tr>    
+  </table><br><br>
+  <table>
+    <tr>
+      <td>
+        <div>
+          <button class="del" onclick="delFromCart('Mala soup (mild)',59)">Remove</button>
+          <button class="add" onclick="addToCart('Mala soup (mild)', 59)">Add</button>
+
+        </div>       
+      </td>
+      <td>
+        <div>
+          <button  class="del" onclick="delFromCart('Mala soup (hot)',59)">Remove</button>
+          <button class="add"  onclick="addToCart('Mala soup (hot)', 59)">Add</button>
+        </div>  
+      </td>
+      <td>
+        <div>          
+          <button class="del" onclick="delFromCart('Shiitake soup', 59)">Remove</button>
+          <button class="add" onclick="addToCart('Shiitake soup', 59)">Add</button>
+        </div>  
+      </td>
+    </tr>  
+  </table><br><br>
+  <table>
+    <tr>
+      <td class="loy1" rowspan="2">
+        <div class="product">
+          <img src="imgs/ดูกหมู.png" alt="Pork rib soup">
+          <p>Pork rib soup</p>
+          <p>59 baht</p>
+        </div>
+      </td> 
+      <td class="loy1" rowspan="2">
+        <div class="product">
+          <img src="imgs/มะเขือ.png" alt="Tomato soup">
+          <p>Tomato soup</p>
+          <p>59 baht</p>
+        </div>
+      </td>
+      <td class="loy1" rowspan="2">
+        <div class="product">
+          <img src="imgs/ดูกไก่.png" alt="Chicken bones soup">
+          <p>Chicken bones with <br>Dong quai soup</p>
+          <p>59 baht</p>
+        </div>
+      </td>
+    </tr>  
+  </table><br><br>
+  <table>
+    <tr>
+      <td>
+        <div>
+          <button class="del" onclick="delFromCart('Pork rib soup', 59)">Remove</button>
+          <button class="add" onclick="addToCart('Pork rib soup', 59)">Add</button>
+
+        </div>       
+      </td>
+      <td>
+        <div>
+          <button  class="del" onclick="delFromCart('Tomato soup', 59)">Remove</button>
+          <button class="add"  onclick="addToCart('Tomato soup', 59)">Add</button>
+        </div>  
+      </td>
+      <td>
+        <div>          
+          <button class="del" onclick="delFromCart('Chicken bones soup', 59)">Remove</button>
+          <button class="add" onclick="addToCart('Chicken bones soup', 59)">Add</button>
+        </div>  
+      </td>
+    </tr>  
+  </table><br><br>
+  <a href="#" class="previous">&laquo; Previous</a>
+  <a href="fm_menu1.html" class="next">Next &raquo;</a><br><br>
+</div>
+
+<div id="noodle" class="tabcontent">
+  <h1 style="color: #990000; font-size: 100px; margin-top: 0; background: -webkit-linear-gradient(#fb6565, #f31e1e);
+  background-clip: text; -webkit-text-fill-color: transparent;">Noodles</h1>
+  <table>
+    <tr>
+      <td class="loy" rowspan="2">
+        <div class="product">
+          <img src="imgs/มันหนึบ.png" alt="Potato noodles">
+          <p>Potato noodles</p>
+          <p>20 baht</p>
+        </div>
+      </td>
+      <td class="loy" rowspan="2">
+        <div class="product">
+          <img src="imgs/บะหมี่.png" alt="Egg noodles">
+          <p>Egg noodles</p>
+          <p>20 baht</p>
+        </div>
+      </td>
+      <td class="loy" rowspan="2">
+        <div class="product">
+          <img src="imgs/วุ้นเส้น.png" alt="Glass noodles">
+          <p>Glass noodles</p>
+          <p>20 baht</p>
+        </div>  
+      </td>
+    </tr>
+  </table><br><br>
+  <table>
+    <tr>
+      <td>
+        <div>
+          <button class="del" onclick="delFromCart('Potato noodles', 20)">Remove</button>
+          <button class="add" onclick="addToCart('Potato noodles', 20)">Add</button>
+
+        </div>       
+      </td>
+      <td>
+        <div>
+          <button  class="del" onclick="delFromCart('Egg noodles', 20)">Remove</button>
+          <button class="add"  onclick="addToCart('Egg noodles', 20)">Add</button>
+        </div>  
+      </td>
+      <td>
+        <div>          
+          <button class="del" onclick="delFromCart('Glass noodles', 20)">Remove</button>
+          <button class="add" onclick="addToCart('Glass noodles', 20)">Add</button>
+        </div>  
+      </td>
+    </tr>  
+  </table><br><br>
+  <a href="fm_menu.html" class="previous">&laquo; Previous</a>
+  <a href="fm_menu2.html" class="next">Next &raquo;</a><br><br>
+</div>
+
+<div id="meat" class="tabcontent">
+  <h1 style="color: #990000; font-size: 100px; margin-top: 0; background: -webkit-linear-gradient(#fb6565, #f31e1e);
+  background-clip: text; -webkit-text-fill-color: transparent;">Meats</h1>
+  <table>
+    <tr rowspan="2">
+      <td class="loy" rowspan="2">
+        <div class="product">
+          <img src="imgs/bacon.png" alt="Bacon">
+          <p>Bacon</p>
+          <p>30 baht</p>
+        </div>  
+      </td>
+      <td class="loy" rowspan="2">
+        <div class="product">
+          <img src="imgs/beef.png" alt="Beef">
+          <p>Beef</p>
+          <p>50 baht</p>
+        </div>  
+      </td>
+      <td class="loy" rowspan="2">
+        <div class="product">
+          <img src="imgs/dolly.png" alt="Dolly fish">
+          <p>Dolly fish</p>
+          <p>30 baht</p>
+        </div>  
+      </td>
+    </tr>
+  </table><br><br>
+  <table>
+    <tr>
+      <td>
+        <div>
+          <button class="del" onclick="delFromCart('Bacon', 30)">Remove</button>
+          <button class="add" onclick="addToCart('Bacon', 30)">Add</button>
+
+        </div>       
+      </td>
+      <td>
+        <div>
+          <button  class="del" onclick="delFromCart('Beef', 50)">Remove</button>
+          <button class="add"  onclick="addToCart('Beef', 50)">Add</button>
+        </div>  
+      </td>
+      <td>
+        <div>          
+          <button class="del" onclick="delFromCart('Dolly fish', 30)">Remove</button>
+          <button class="add" onclick="addToCart('Dolly fish', 30)">Add</button>
+        </div>  
+      </td>
+    </tr>  
+  </table><br><br>
+  <table>
+    <tr>
+      <td class="loy" rowspan="2">
+        <div class="product">
+          <img src="imgs/saipedd.png" alt="Duck guts">
+          <p>Duck guts</p>
+          <p>30 baht</p>
+        </div> 
+      </td>
+      <td class="loy" rowspan="2">
+        <div class="product">
+          <img src="imgs/shrimp.png" alt="Shrimp">
+          <p>Shrimp</p>
+          <p>15 baht</p>
+        </div> 
+      </td>
+      <td class="loy" rowspan="2">
+        <div class="product">
+          <img src="imgs/streaky_pork.png" alt="Pork belly">
+          <p>Pork belly</p>
+          <p>10 baht</p>
+        </div>
+      </td>
+    </tr>    
+  </table><br><br>
+  <table>
+    <tr>
+      <td>
+        <div>
+          <button class="del" onclick="delFromCart('Duck guts', 30)">Remove</button>
+          <button class="add" onclick="addToCart('Duck guts', 30)">Add</button>
+
+        </div>       
+      </td>
+      <td>
+        <div>
+          <button  class="del" onclick="delFromCart('Shrimp', 15)">Remove</button>
+          <button class="add"  onclick="addToCart('Shrimp', 15)">Add</button>
+        </div>  
+      </td>
+      <td>
+        <div>          
+          <button class="del" onclick="delFromCart('Pork belly', 10)">Remove</button>
+          <button class="add" onclick="addToCart('Pork belly', 10)">Add</button>
+        </div>  
+      </td>
+    </tr>  
+  </table><br><br>
+  <a href="fm_menu1.html" class="previous">&laquo; Previous</a>
+  <a href="fm_menu3.html" class="next">Next &raquo;</a><br><br>
+</div>
+
+<div id="vegetables" class="tabcontent">
+  <h1 style="color: #990000; font-size: 100px; margin-top: 0; background: -webkit-linear-gradient(#fb6565, #f31e1e);
+  background-clip: text; -webkit-text-fill-color: transparent;">Vegetables</h1>
+  <table>
+    <tr>
+      <td class="loy" rowspan="2">
+        <div class="product">
+          <img src="imgs/Broccoli.png" alt="Broccoli">
+          <p>Broccoli</p>
+          <p>15 baht</p>
+        </div>  
+      </td>
+      <td class="loy" rowspan="2">
+        <div class="product">
+          <img src="imgs/Chinese_cabbage.png" alt="Chinese cabbage">
+          <p>Chinese cabbage</p>
+          <p>15 baht</p>
+        </div> 
+      </td>
+      <td class="loy" rowspan="2">
+        <div class="product">
+          <img src="imgs/lotus_root.png" alt="Lotus root">
+          <p>Lotus root</p>
+          <p>15 baht</p>
+        </div>
+      </td>
+    </tr>
+  </table><br><br>
+  <table>
+    <tr>
+      <td>
+        <div>
+          <button class="del" onclick="delFromCart('Broccoli', 15)">Remove</button>
+          <button class="add" onclick="addToCart('Broccoli', 15)">Add</button>
+
+        </div>       
+      </td>
+      <td>
+        <div>
+          <button  class="del" onclick="delFromCart('Chinese cabbage', 15)">Remove</button>
+          <button class="add"  onclick="addToCart('Chinese cabbage', 15)">Add</button>
+        </div>  
+      </td>
+      <td>
+        <div>          
+          <button class="del" onclick="delFromCart('Lotus root', 15)">Remove</button>
+          <button class="add" onclick="addToCart('Lotus root', 15)">Add</button>
+        </div>  
+      </td>
+    </tr>  
+  </table><br><br>
+  <table>
+    <tr>
+      <td class="loy" rowspan="2">
+        <div class="product">
+          <img src="imgs/potato.png" alt="Potato">
+          <p>Potato</p>
+          <p>15 baht</p>
+
+        </div>
+      </td>
+      <td class="loy" rowspan="2">
+        <div class="product">
+          <img src="imgs/seaweed.png" alt="Seaweed">
+          <p>Seaweed</p>
+          <p>15 baht</p>
+        </div>
+      </td>
+      <td class="loy" rowspan="2">
+        <div class="product">
+          <img src="imgs/water_spinach.png" alt="water_spinach">
+          <p>Water spinach</p>
+          <p>15 baht</p>
+        </div>
+      </td>
+    </tr>    
+  </table><br><br>
+  <table>
+    <tr>
+      <td>
+        <div>
+          <button class="del" onclick="delFromCart('Potato', 15)">Remove</button>
+          <button class="add" onclick="addToCart('Potato', 15)">Add</button>
+
+        </div>       
+      </td>
+      <td>
+        <div>
+          <button  class="del" onclick="delFromCart('Seaweed', 15)">Remove</button>
+          <button class="add"  onclick="addToCart('Seaweed', 15)">Add</button>
+        </div>  
+      </td>
+      <td>
+        <div>          
+          <button class="del" onclick="delFromCart('Water spinach', 15)">Remove</button>
+          <button class="add" onclick="addToCart('Water spinach', 15)">Add</button>
+        </div>  
+      </td>
+    </tr>  
+  </table><br><br>
+  <a href="fm_menu2.html" class="previous">&laquo; Previous</a>
+  <a href="fm_menu4.html" class="next">Next &raquo;</a><br><br>
+</div>
+
+<div id="additional" class="tabcontent">
+  <h1 style="color: #990000; font-size: 100px; margin-top: 0; background: -webkit-linear-gradient(#fb6565, #f31e1e);
+  background-clip: text; -webkit-text-fill-color: transparent;" >Additional</h1>
+  <table>
+    <tr>
+      <td class="loy" rowspan="2">
+        <div class="product">
+          <img src="imgs/egg.png" alt="egg">
+          <p>Egg</p>
+          <p>10 baht</p>
+        </div></td>
+      <td class="loy" rowspan="2">
+        <div class="product">
+          <img src="imgs/fish_tofu.png" alt="fish_tofu">
+          <p>Fish tofu</p>
+          <p>10 baht</p>
+        </div>
+      </td>
+      <td class="loy" rowspan="2">
+        <div class="product">
+          <img src="imgs/sausage.png" alt="sausage">
+          <p>Sausage</p>
+          <p>10 baht</p>
+        </div>  
+      </td>
+    </tr>
+  </table><br><br>
+  <table>
+    <tr>
+      <td>
+        <div>
+          <button class="del" onclick="delFromCart('Egg', 10)">Remove</button>
+          <button class="add" onclick="addToCart('Egg', 10)">Add</button>
+
+        </div>       
+      </td>
+      <td>
+        <div>
+          <button  class="del" onclick="delFromCart('Fish tofu', 10)">Remove</button>
+          <button class="add"  onclick="addToCart('Fish tofu', 10)">Add</button>
+        </div>  
+      </td>
+      <td>
+        <div>          
+          <button class="del" onclick="delFromCart('Sausage', 10)">Remove</button>
+          <button class="add" onclick="addToCart('Sausage', 10)">Add</button>
+        </div>  
+      </td>
+    </tr>  
+  </table><br><br>
+  <table>
+      <tr>
+        <td class="loy" rowspan="2">
+          <div class="product">
+            <img src="imgs/tofu_ball.png" alt="tofu_ball">
+            <p>Tofu ball</p>
+            <p>10 baht</p>
+          </div>
+        </td>
+        <td class="loy" rowspan="2">
+          <div class="product">
+            <img src="imgs/Tofu_rolls.png" alt="Tofu_rolls">
+            <p>Tofu rolls</p>
+            <p>10 baht</p>
+          </div>
+        </td>
+        <td class="loy" rowspan="2">
+          <div class="product">
+            <img src="imgs/Triangular_Fish_Tofu.png" alt="triangular">
+            <p>Triangular Fish Tofu</p>
+            <p>10 baht</p>
+          </div>
+        </td>
+      </tr>    
+  </table><br><br>
+  <table>
+    <tr>
+      <td>
+        <div>
+          <button class="del" onclick="delFromCart('Tofu ball', 10)">Remove</button>
+          <button class="add" onclick="addToCart('Tofu ball', 10)">Add</button>
+
+        </div>       
+      </td>
+      <td>
+        <div>
+          <button  class="del" onclick="delFromCart('Tofu rolls', 10)">Remove</button>
+          <button class="add"  onclick="addToCart('Tofu rolls', 10)">Add</button>
+        </div>  
+      </td>
+      <td>
+        <div>          
+          <button class="del" onclick="delFromCart('Triangular Fish Tofu', 10)">Remove</button>
+          <button class="add" onclick="addToCart('Triangular Fish Tofu', 10)">Add</button>
+        </div>  
+      </td>
+    </tr>  
+  </table><br><br>
+  <a href="fm_menu3.html" class="previous">&laquo; Previous</a>
+  <a href="#" class="next">Next &raquo;</a><br><br>
+</div>
+
+<script>
+  function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+  }
+  
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+
+
+  let cart = [];
+    let totalPrice = 0;
+
+    function addToCart(productName, price) {
+      let currentCount = localStorage.getItem('totalPrice');
+      currentCount = parseInt(currentCount) || 0;
+      currentCount += price;
+      
+        let existingItem = cart.find(item => item.name === productName);
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            cart.push({name: productName, quantity: 1, price: price});
+        }
+        updateCart();
+    }
+    function delFromCart(productName, price){
+      let currentCount = localStorage.getItem('totalPrice');
+      currentCount = parseInt(currentCount) || 0;
+      currentCount += price;
+
+      let index = cart.findIndex(item => item.name === productName);
+        if (index !== -1) {
+            if (cart[index].quantity === 1) {
+                cart.splice(index, 1);
+            } else {
+                cart[index].quantity--;
+            }
+        }
+      updateCart();
+    }
+
+    function removeFromCart(productName) {
+      let currentCount = localStorage.getItem('totalPrice');
+      currentCount = parseInt(currentCount) || 0;
+      currentCount -= price;
+
+      let index = cart.findIndex(item => item.name === productName);
+        if (index !== -1) {
+            if (cart[index].quantity === 1) {
+                cart.splice(index, 1);
+            } else {
+                cart[index].quantity--;
+            }
+        }
+        updateCart();
+    }
+
+    function updateCart() {
+        let cartContent = document.getElementById("cartContent");
+        let totalPriceElement = document.getElementById("totalPrice");
+        cartContent.innerHTML = "";
+        totalPrice = 0;
+        cart.forEach(item => {
+            totalPrice += item.quantity * item.price;
+            cartContent.innerHTML += `<p>${item.name} x ${item.quantity} </p>`;
+        });
+        totalPriceElement.innerText = totalPrice.toFixed(2);
+    }
+    
+  
+      function increaseMenuCount() {
+      let currentCount = localStorage.getItem('totalPrice');
+      currentCount = parseInt(currentCount) || 0; // กำหนดให้ currentCount เป็น 0 หากไม่มีค่าใน LocalStorage
+      currentCount += price;
+      localStorage.setItem('totalPrice', currentCount);
+      document.getElementById('totalPrice').textContent = currentCount;
+    }
+
+    function decreaseMenuCount() {
+      let currentCount = localStorage.getItem('totalPrice');
+      currentCount = parseInt(currentCount) || 0;
+      if (currentCount > 0) {
+        currentCount -= price;
+        localStorage.setItem('totalPrice', currentCount);
+        document.getElementById('totalPrice').textContent = currentCount;
+      }
+    }
+
+    // โหลดค่าจำนวนเมนูที่เพิ่มมาเมื่อโหลดหน้าเว็บ
+    
+    window.onload = function() {
+        let currentCount = localStorage.getItem('cartContent');
+        document.getElementById('cartContent').textContent = currentCount || 0;
+      };
+    
+  </script>
+   
+</body>
+</html> 

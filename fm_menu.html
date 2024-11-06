@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+    <html lang="th">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+    Fēngqù Málà
+</title>
+<link rel="shortcut icon" href="imgs/malatang.png" type="image/x-icon"> 
+<link rel="stylesheet" href="fm.css">
+
+</head>
+<body>
+<a class="langB" href="fm_menu1.html">TH</a>  
+<a class="langB">EN</a>  
+<h1 class="FM" style="text-align: left;"><img src="imgs/malatang_h1.png" style="height: 50px;" > Fēngqù Málà </h1>
+
+
+<button class="tablink" onclick="openPage('soup', this, '#990000')" id="defaultOpen">soup</button>
+<button class="tablink" onclick="openPage('noodle', this, '#990000')">noodles</button>
+<button class="tablink" onclick="openPage('meat', this, '#990000')">meats</button>
+<button class="tablink" onclick="openPage('vegetables', this, '#990000')">vegetables</button>
+<button class="tablink" onclick="openPage('additional', this, '#990000')">additional</button>
+<button class="tablink" onclick="openPage('receipt', this, '#990000')">receipt</button>
+
+
+<!-- ตะกร้า -->
+
+<!-- Soup -->
+<div id="soup" class="tabcontent">
+    <h1 style="color: #990000; font-size: 100px; margin-top: 0; background: -webkit-linear-gradient(#fb6565, #f31e1e);
+  background-clip: text; -webkit-text-fill-color: transparent;">Soup</h1>
+  <div class="menu">
+    <div class="menu-item">
+      <img src="imgs/เผ็ดน้อย.png" alt="เมนู 1">
+      <h2>Mala soup (Mild)</h2>
+      <p>ราคา: 59 บาท</p>
+      <button class="del" onclick="delFromCart('Mala soup (mild)',59 )">Remove</button>
+      <button class="add" onclick="addToCart('Mala soup (mild)', 59)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/เผ็ดมาก.png" alt="เมนู 1">
+      <h2>Mala soup (Hot)</h2>
+      <p>ราคา: 59 บาท</p>
+      <button  class="del" onclick="delFromCart('Mala soup (hot)',59 )">Remove</button>
+      <button class="add"  onclick="addToCart('Mala soup (hot)', 59)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/เห็ดหอม.png" alt="เมนู 1">
+      <h2>Shiitake soup<br><br></h2>
+      <p>ราคา: 59 บาท</p>
+      <button class="del" onclick="delFromCart('Shiitake soup', 59)">Remove</button>
+      <button class="add" onclick="addToCart('Shiitake soup', 59)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/ดูกหมู.png" alt="เมนู 1">
+      <h2>Pork rib soup<br><br><br></h2>
+      <p>ราคา: 59 บาท</p>
+      <button class="del" onclick="delFromCart('Pork rib soup', 59)">Remove</button>
+      <button class="add" onclick="addToCart('Pork rib soup', 59)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/มะเขือ.png" alt="เมนู 1">
+      <h2>Tomato soup<br><br><br></h2>
+      <p>ราคา: 59 บาท</p>
+      <button  class="del" onclick="delFromCart('Tomato soup', 59)">Remove</button>
+      <button class="add"  onclick="addToCart('Tomato soup', 59)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/ดูกไก่.png" alt="เมนู 1">
+      <h2>Chicken bones with <br>Dong quai soup</h2>
+      <p>ราคา: 59 บาท</p>
+      <button class="del" onclick="delFromCart('Chicken bones soup', 59)">Remove</button>
+      <button class="add" onclick="addToCart('Chicken bones soup', 59)">Add</button>
+    </div>
+    <!-- เพิ่มเมนูเพิ่มได้ตามต้องการ -->
+  </div>
+  
+  <a onclick="openPage('noodle', this)" class="next">Next &raquo;</a><br><br>
+</div>
+
+<!-- Noodles -->
+<div id="noodle" class="tabcontent">
+  <h1 style="color: #990000; font-size: 100px; margin-top: 0; background: -webkit-linear-gradient(#fb6565, #f31e1e);
+  background-clip: text; -webkit-text-fill-color: transparent;">Noodles</h1>
+  <div class="menu">
+    <div class="menu-item">
+      <img src="imgs/มันหนึบ.png" alt="เมนู 1">
+      <h2>Potato noodles</h2>
+      <p>ราคา: 20 บาท</p>
+      <button class="del" onclick="delFromCart('Potato noodles', 20)">Remove</button>
+      <button class="add" onclick="addToCart('Potato noodles', 20)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/บะหมี่.png" alt="เมนู 1">
+      <h2><br>Egg noodles</h2>
+      <p>ราคา: 20 บาท</p>
+      <button  class="del" onclick="delFromCart('Egg noodles', 20)">Remove</button>
+      <button class="add"  onclick="addToCart('Egg noodles', 20)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/วุ้นเส้น.png" alt="เมนู 1">
+      <h2><br>Glass noodles</h2>
+      <p>ราคา: 20 บาท</p>
+      <button class="del" onclick="delFromCart('Glass noodles', 20)">Remove</button>
+      <button class="add" onclick="addToCart('Glass noodles', 20)">Add</button>
+    </div>
+    
+    </div>
+    <a onclick="openPage('soup', this)" class="previous">&laquo; Previous</a>
+    <a onclick="openPage('meat', this)" class="next">Next &raquo;</a><br><br>
+</div>
+  
+<!-- Meats -->
+<div id="meat" class="tabcontent">
+  <h1 style="color: #990000; font-size: 100px; margin-top: 0; background: -webkit-linear-gradient(#fb6565, #f31e1e);
+  background-clip: text; -webkit-text-fill-color: transparent;">Meats</h1>
+  <div class="menu">
+    <div class="menu-item">
+      <img src="imgs/bacon.png" alt="เมนู 1">
+      <h2>Bacon</h2>
+      <p>price: 30 Baht</p>
+      <button class="del" onclick="delFromCart('Bacon',30)">Remove</button>
+      <button class="add" onclick="addToCart('Bacon', 30)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/beef.png" alt="เมนู 1">
+      <h2>Beef</h2>
+      <p>price: 50 Baht</p>
+      <button  class="del" onclick="delFromCart('Beef',50)">Remove</button>
+      <button class="add"  onclick="addToCart('Beef', 50)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/dolly.png" alt="เมนู 1">
+      <h2>Dolly fish<br><br></h2>
+      <p>price: 30 Baht</p>
+      <button class="del" onclick="delFromCart('Dolly', 30)">Remove</button>
+      <button class="add" onclick="addToCart('Dolly', 30)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/saipedd.png" alt="เมนู 1">
+      <h2>Duck guts<br><br><br></h2>
+      <p>price: 30 Baht</p>
+      <button class="del" onclick="delFromCart('Duck guts', 30)">Remove</button>
+      <button class="add" onclick="addToCart('Duck guts', 30)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/shrimp.png" alt="เมนู 1">
+      <h2>Shrimp<br><br><br></h2>
+      <p>price: 15 Baht</p>
+      <button  class="del" onclick="delFromCart('Shrimp', 15)">Remove</button>
+      <button class="add"  onclick="addToCart('Shrimp', 15)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/streaky_pork.png" alt="เมนู 1">
+      <h2>Pork belly</h2>
+      <p>price: 10 Baht</p>
+      <button class="del" onclick="delFromCart('Pork belly', 10)">Remove</button>
+      <button class="add" onclick="addToCart('Pork belly', 10)">Add</button>
+    </div>
+    <!-- เพิ่มเมนูเพิ่มได้ตามต้องการ -->
+  </div>
+  <a onclick="openPage('noodle', this)" class="previous">&laquo; Previous</a>
+  <a onclick="openPage('vegetables', this)" class="next">Next &raquo;</a><br><br>
+</div>
+
+<!-- Vegetables -->
+<div id="vegetables" class="tabcontent">
+  <h1 style="color: #990000; font-size: 100px; margin-top: 0; background: -webkit-linear-gradient(#fb6565, #f31e1e);
+  background-clip: text; -webkit-text-fill-color: transparent;">Vegetables</h1>
+  <div class="menu">
+    <div class="menu-item">
+      <img src="imgs/Broccoli.png" alt="เมนู 1">
+      <h2>Broccoli</h2>
+      <p>price: 10 Baht</p>
+      <button class="del" onclick="delFromCart('Broccoli',10)">Remove</button>
+      <button class="add" onclick="addToCart('Broccoli', 10)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/Chinese_cabbage.png" alt="เมนู 1">
+      <h2>Chinese cabbage</h2>
+      <p>price: 10 Baht</p>
+      <button  class="del" onclick="delFromCart('Chinese cabbage',10)">Remove</button>
+      <button class="add"  onclick="addToCart('Chinese cabbage', 10)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/lotus_root.png" alt="เมนู 1">
+      <h2>Lotus root<br><br></h2>
+      <p>price: 10 Baht</p>
+      <button class="del" onclick="delFromCart('Lotus root', 10)">Remove</button>
+      <button class="add" onclick="addToCart('Lotus root', 10)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/potato.png" alt="เมนู 1">
+      <h2>Potato<br><br><br></h2>
+      <p>price: 10 Baht</p>
+      <button class="del" onclick="delFromCart('Potato', 10)">Remove</button>
+      <button class="add" onclick="addToCart('Potato', 10)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/seaweed.png" alt="เมนู 1">
+      <h2>Seaweed<br><br><br></h2>
+      <p>price: 10 Baht</p>
+      <button  class="del" onclick="delFromCart('Seaweed', 10)">Remove</button>
+      <button class="add"  onclick="addToCart('Seaweed', 10)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/water_spinach.png" alt="เมนู 1">
+      <h2>Water spinach</h2>
+      <p>price: 10 Baht</p>
+      <button class="del" onclick="delFromCart('Water spinach', 10)">Remove</button>
+      <button class="add" onclick="addToCart('Water spinach', 10)">Add</button>
+    </div>
+    <!-- เพิ่มเมนูเพิ่มได้ตามต้องการ -->
+  </div>
+  <a onclick="openPage('meat', this)" class="previous">&laquo; Previous</a>
+  <a onclick="openPage('additional', this)" class="next">Next &raquo;</a><br><br>
+</div>
+
+<!-- Additional -->
+<div id="additional" class="tabcontent">
+  <h1 style="color: #990000; font-size: 100px; margin-top: 0; background: -webkit-linear-gradient(#fb6565, #f31e1e);
+  background-clip: text; -webkit-text-fill-color: transparent;" >Additional</h1>
+  <div class="menu">
+    <div class="menu-item">
+      <img src="imgs/egg.png" alt="เมนู 1">
+      <h2>Egg</h2>
+      <p>price: 10 Baht</p>
+      <button class="del" onclick="delFromCart('Egg',10)">Remove</button>
+      <button class="add" onclick="addToCart('Egg', 10)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/fish_tofu.png" alt="เมนู 1">
+      <h2>Fish tofu</h2>
+      <p>price: 10 Baht</p>
+      <button  class="del" onclick="delFromCart('Fish tofu',10)">Remove</button>
+      <button class="add"  onclick="addToCart('Fish tofu', 10)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/sausage.png" alt="เมนู 1">
+      <h2>Sausage<br><br></h2>
+      <p>price: 10 Baht</p>
+      <button class="del" onclick="delFromCart('Sausage', 10)">Remove</button>
+      <button class="add" onclick="addToCart('Sausage', 10)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/tofu_ball.png" alt="เมนู 1">
+      <h2>Tofu ball<br><br><br></h2>
+      <p>price: 10 Baht</p>
+      <button class="del" onclick="delFromCart('Tofu ball', 10)">Remove</button>
+      <button class="add" onclick="addToCart('Tofu ball', 10)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/Tofu_rolls.png" alt="เมนู 1">
+      <h2>Tofu rolls<br><br><br></h2>
+      <p>price: 10 Baht</p>
+      <button  class="del" onclick="delFromCart('Tofu rolls', 10)">Remove</button>
+      <button class="add"  onclick="addToCart('Tofu rolls', 10)">Add</button>
+    </div>
+    <div class="menu-item">
+      <img src="imgs/Triangular_Fish_Tofu.png" alt="เมนู 1">
+      <h2>Triangular Fish Tofuh</h2>
+      <p>price: 10 Baht</p>
+      <button class="del" onclick="delFromCart('Triangular Fish Tofu', 10)">Remove</button>
+      <button class="add" onclick="addToCart('Triangular Fish Tofu', 10)">Add</button>
+    </div>
+    <!-- เพิ่มเมนูเพิ่มได้ตามต้องการ -->
+  </div>
+  <a onclick="openPage('vegetables', this)" class="previous">&laquo; Previous</a>
+  <a onclick="openPage('receipt', this)" class="next">Next &raquo;</a><br><br>
+</div>
+
+<div id="receipt" class="tabcontent">
+  
+  <div class="cart">
+    <h1 style="font-size: 100px; margin-top: 1%; background: -webkit-linear-gradient(#fb6565, #f31e1e);
+    background-clip: text; -webkit-text-fill-color: transparent; text-align: center;">Receipt</h1>
+    <img src="imgs/cart.png" style="height: 35px;">
+    <!-- ตัวคำนวณ -->
+    <div id="cartContent"></div>
+    <p style="color: black; font-size: 30px; background-color: rgb(245, 128, 128); border-radius: 10px;">Total: ฿<span id="totalPrice">0</span></p>
+    <button type="submit" class="submit" name="submit">order</button>
+  </div>
+  <a onclick="openPage('soup', this)" class="next">Next order &raquo;</a><br><br>
+</div>
+
+
+
+
+
+<script>
+  function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+  }
+  
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+
+
+  let cart = [];
+    let totalPrice = 0;
+    let currentCount = 0;
+    console.log("cart" , cart)
+    function addToCart(productName, price) {
+      let currentCount = localStorage.getItem('totalPrice');
+      currentCount = parseInt(currentCount) || 0;
+      currentCount += price;
+      
+        let existingItem = cart.find(item => item.name === productName);
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            cart.push({name: productName, quantity: 1, price: price});
+        }
+        updateCart();
+        localStorage.setItem("cart_local", JSON.stringify(cart))
+       console.log("cart" , cart)
+
+    }
+    function delFromCart(productName, price){
+      let currentCount = localStorage.getItem('totalPrice');
+      currentCount = parseInt(currentCount) || 0;
+      currentCount += price;
+      console.log("cart before del" , cart)
+
+      const filtered = cart.filter(item => item.name !== productName);
+      console.log("filter" , filtered)
+      // localStorage.removeItem("cart_local")
+      localStorage.setItem("cart_local" , JSON.stringify(filtered)) 
+
+
+      let index = cart.findIndex(item => item.name === productName);
+         console.log("index of product" , index)
+        if (index !== -1) {
+
+            if (cart[index].quantity === 1) {
+                cart.splice(index, 1);
+                console.log(cart[index])
+            } else {
+                cart[index].quantity--;
+            }
+        }
+
+      updateCart();
+    }
+
+    function removeFromCart(productName) {
+      let currentCount = localStorage.getItem('totalPrice');
+      currentCount = parseInt(currentCount) || 0;
+      currentCount -= price;
+
+      let index = cart.findIndex(item => item.name === productName);
+        if (index !== -1) {
+            if (cart[index].quantity === 1) {
+                cart.splice(index, 1);
+            } else {
+                cart[index].quantity--;
+            }
+        }
+        updateCart();
+    }
+
+    function updateCart() {
+        let cartContent = document.getElementById("cartContent");
+        let totalPriceElement = document.getElementById("totalPrice");
+        cartContent.innerHTML = "";
+        totalPrice = 0;
+        cart.forEach(item => {
+            totalPrice += item.quantity * item.price;
+            cartContent.innerHTML += `<p>${item.name} x ${item.quantity} </p>`;
+        });
+        totalPriceElement.innerText = totalPrice.toFixed(2);
+    }
+    
+    
+    function toggleLanguage() {
+      var thaiContent = document.querySelector('.thai-content');
+      var englishContent = document.querySelector('.english-content');
+
+      if (thaiContent.style.display === 'none') {
+        thaiContent.style.display = 'block';
+        englishContent.style.display = 'none';
+      } else {
+        thaiContent.style.display = 'none';
+        englishContent.style.display = 'block';
+      }
+    }
+    
+    
+    
+  </script>
+   
+</body>
+</html> 
